@@ -24,7 +24,6 @@ class BooksFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'required',
             'item_name' => 'required|min:3|max:255',
             'item_number' => 'required|numeric|min:1|max:10000',
             'item_amount' => 'required|numeric|min:0|max:999999',

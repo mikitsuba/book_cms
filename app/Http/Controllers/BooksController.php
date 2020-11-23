@@ -9,7 +9,7 @@ use Validator;
 
 class BooksController extends Controller
 {
-    // 認証処理を入れる
+    // // 認証処理を入れる
     // /**
     // * Create a new controller instance.
     // *
@@ -27,7 +27,7 @@ class BooksController extends Controller
      */
     public function index()
     {
-        $books = Book::orderBy('created_at', 'asc')->paginate(10);
+        $books = Book::orderBy('created_at', 'desc')->paginate(10);
         return view('books', [
             'books' => $books // 'books'は、books.blade.phpにおいて、$booksとして受け取られる
         ]);
